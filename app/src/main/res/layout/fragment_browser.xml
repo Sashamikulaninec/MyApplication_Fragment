@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@android:color/holo_blue_bright">
+    <LinearLayout
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame"
+
+        >
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/btnBack"
+            android:background="@drawable/backwithborder"/>
+
+        <EditText
+            android:textSize="25dp"
+            android:text="  http://"
+            android:layout_weight="10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/editText"
+            android:background="@drawable/backwithborder"
+
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="Go"
+            android:id="@+id/btnGo"
+            android:background="@drawable/backwithborder"
+            />
+    </LinearLayout>
+
+    <WebView
+
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame"
+        />
+
+
+
+</RelativeLayout>

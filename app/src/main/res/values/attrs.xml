@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="name" format="string"  />
+        <attr name="number" format="string"/>
+        <attr name="textColor"  format="color"/>
+            <attr name="text" format="integer"
+            />
+    </declare-styleable>
+
+</resources>

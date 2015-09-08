@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:orderInCategory="1"/>
+
+    <item android:id="@+id/newHome"
+        android:title="New home page"
+        android:orderInCategory="2"/>
+</menu>
