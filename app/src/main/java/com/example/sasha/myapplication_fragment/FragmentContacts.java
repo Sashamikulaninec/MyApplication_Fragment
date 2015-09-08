@@ -15,7 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.sasha.myapplication_fragment.Item.Item;
+import com.example.sasha.myapplication_fragment.Model.Item;
 import com.example.sasha.myapplication_fragment.db.MyDBHelper;
 
 import java.util.ArrayList;
@@ -84,7 +84,6 @@ public class FragmentContacts extends Fragment {
             db.insert(MyDBHelper.CONTACTS_TABLE_NAME, null, cv);
         }
         phones.close();
-
     }
 
     public void readFromDb( List list){

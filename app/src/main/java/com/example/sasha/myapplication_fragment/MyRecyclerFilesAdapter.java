@@ -8,13 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.example.sasha.myapplication_fragment.Item.MyFile;
+import com.example.sasha.myapplication_fragment.Model.MyFile;
 
 import java.util.List;
 
-/**
- * Created by sasha on 02.09.15.
- */
 public class MyRecyclerFilesAdapter extends RecyclerView.Adapter<MyRecyclerFilesAdapter.MyHolder> {
 
     private final Context mMyContext;
@@ -28,14 +25,12 @@ public class MyRecyclerFilesAdapter extends RecyclerView.Adapter<MyRecyclerFiles
     @Override
     public MyHolder onCreateViewHolder(final ViewGroup viewGroup, int _viewType) {
         final View itemView = LayoutInflater.from(mMyContext).inflate(R.layout.files, viewGroup, false);
-
         return new MyHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(final MyHolder myHolder, final int i) {
         myHolder.onBind();
-
     }
 
     @Override
@@ -44,24 +39,19 @@ public class MyRecyclerFilesAdapter extends RecyclerView.Adapter<MyRecyclerFiles
     }
 
 
-
-
     public class MyHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
-        TextView textView1;
+
 
         public MyHolder(final View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.file_type_AM);
-
-
         }
 
         public void onBind() {
             MyFile myFile = mFileData.get(getPosition());
             textView.setText(myFile.getFileName());
-
         }
     }
 }
