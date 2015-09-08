@@ -17,7 +17,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.sasha.myapplication_fragment.Item.Item;
+import com.example.sasha.myapplication_fragment.Model.Item;
 import com.example.sasha.myapplication_fragment.db.MyDBHelper;
 
 import java.util.List;
@@ -29,7 +29,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     private Context mContext;
     private List<Item> mData;
     private MyDBHelper mMyDBHelper;
-
 
     public MyRecyclerAdapter(Context _context, List<Item> _data) {
         mContext = _context;
@@ -150,7 +149,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         CustomView customView;
 
         public MyViewHolder(final View itemView) {
-
             super(itemView);
             customView = (CustomView) itemView.findViewById(R.id.custom);
         }

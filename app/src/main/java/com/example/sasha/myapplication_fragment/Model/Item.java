@@ -1,4 +1,4 @@
-package com.example.sasha.myapplication_fragment.Item;
+package com.example.sasha.myapplication_fragment.Model;
 
 /**
  * Created by sasha on 21.08.15.

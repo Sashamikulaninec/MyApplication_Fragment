@@ -36,13 +36,11 @@ public class FragmentBrowser extends Fragment implements View.OnClickListener {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-
     }
 
     public void onCreate(Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
-
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,7 +63,6 @@ public class FragmentBrowser extends Fragment implements View.OnClickListener {
             case R.id.btnGo:
                 if(mSettings.contains(APP_PREFERENCES_URL)){
                     mEText.setText(mSettings.getString(APP_PREFERENCES_URL, ""));
-
                     mWebView.loadUrl(mEText.getText().toString());
                 }else {
                     String url = mEText.getText().toString();
@@ -80,9 +77,7 @@ public class FragmentBrowser extends Fragment implements View.OnClickListener {
                 } else
                     Toast.makeText(this.getActivity().getApplication(), "No way back", Toast.LENGTH_SHORT).show();
                 break;
-
         }
-
     }
 
     public void onStop() {
@@ -96,16 +91,12 @@ public class FragmentBrowser extends Fragment implements View.OnClickListener {
     }
 
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         inflater.inflate(R.menu.frag_browser, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
@@ -146,10 +137,7 @@ public class FragmentBrowser extends Fragment implements View.OnClickListener {
                     });
             builder.create().show();
             return true;
-
         }
         return super.onOptionsItemSelected(item);
-
     }
-
 }
